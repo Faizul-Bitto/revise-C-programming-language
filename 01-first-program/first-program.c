@@ -10,9 +10,8 @@ int main()
 
     //! Let's guide it then -
     printf("Hello");
-    printf("\n"); // backslash and then n -> escape sequence
-    printf(
-        "World!\n"); // we can even directly put "\n" like this in the same line
+    printf("\n");       // backslash and then n -> escape sequence
+    printf("World!\n"); // we can even directly put "\n" like this in the same line
 
     //! Another thing is - \t. It means to put a 'tab' space - 4 space -> escape sequence
     printf("Hello\t World!"); // output will be : Hello	 World! 4 space between "Hello" & "World!"
