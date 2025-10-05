@@ -1,0 +1,6 @@
+Summation : 30
+Subtraction : 10
+Multiplication : 600
+Division : 2
+Division : 4.50
+Division : 4.00
