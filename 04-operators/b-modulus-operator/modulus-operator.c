@@ -3,7 +3,7 @@
 int main()
 {
     /*
-        Operators are symbols. To do an operation we use these symbols called Modulus Operator :
+        Operators are symbols. To do an operation we use these symbols called 'Operators'. Modulus Operator :
 
         % ( modulus )
     */

@@ -3,7 +3,7 @@
 int main()
 {
     /*
-        Operators are symbol.To do an operation we use these symbols called 'Operators'.Arithmetic operators :
+        Operators are symbol.To do an operation we use these symbols called 'Operators'. Arithmetic operators :
 
         + ( addition )
         - ( subtraction )
