@@ -226,29 +226,6 @@ for (int i = 0; i < size; i++) {
 }
 ```
 
-## Loop Control Variables
-
-### Variable Scope
-
-```c
-for (int i = 0; i < 5; i++) {
-    // i is only accessible inside this loop
-    printf("%d ", i);
-}
-// i is not accessible here
-```
-
-### External Variable
-
-```c
-int i;  // Declared outside
-
-for (i = 0; i < 5; i++) {
-    printf("%d ", i);
-}
-// i is still accessible here (value will be 5)
-```
-
 ## Program Output
 
 When you run the program, you'll see:
@@ -409,47 +386,93 @@ for (int i = 0; i < 10; i++) {
    for (int count = 0; count < 10; count++) { /* better than 'i' sometimes */ }
    ```
 
-2. **Keep loop body simple** and focused on one task
-
-3. **Avoid modifying loop counter inside the loop**
+2. **Match your increment strategy to your goal**
 
    ```c
-   // Avoid this
-   for (int i = 0; i < 10; i++) {
-       i += 2;  // Don't modify i inside the loop
+   // For even numbers, use step increment
+   for (int i = 0; i <= 10; i += 2) { }
+
+   // For filtering, use conditional checks
+   for (int i = 1; i <= 10; i++) {
+       if (i % 2 == 0) { }
    }
+   ```
+
+3. **Initialize accumulators properly**
+
+   ```c
+   int sum = 0;  // Start at 0 for addition
+   int product = 1;  // Start at 1 for multiplication
    ```
 
 4. **Use proper indentation** for readability
 
 5. **Comment complex loops** to explain their purpose
 
-## When to Use For Loops
+6. **Test boundary conditions** (first and last iterations)
 
-**Perfect for:**
+## When to Use Each Loop Type
 
-- Counting operations (1 to N)
-- Processing arrays/lists
-- Repeating actions a known number of times
-- Mathematical calculations with sequences
+**Step Increment (i += 2):**
 
-**Not ideal for:**
+- When you naturally want every 2nd, 3rd, etc. element
+- More efficient than checking conditions
+- Good for patterns like even/odd numbers
 
-- Loops where you don't know how many iterations you need
-- Situations where while loops would be clearer
+**Conditional Filtering (if inside loop):**
+
+- When you need to check each element anyway
+- More flexible for complex conditions
+- Good when you want to classify or process all elements differently
+
+**Accumulation Patterns:**
+
+- Calculating sums, products, averages
+- Counting specific items
+- Building up results over time
+
+**User Input Integration:**
+
+- Making programs dynamic and interactive
+- Processing variable amounts of data
+- Customizable behavior based on user needs
 
 ## Learning Points
 
-1. **Repetition Control**: For loops provide precise control over repeated operations
-2. **Counter Management**: Automatic initialization, checking, and updating of counters
-3. **Efficiency**: Eliminates code duplication and makes programs more maintainable
-4. **Pattern Recognition**: Many programming problems follow the "do something N times" pattern
-5. **Foundation for Arrays**: Essential for processing collections of data
+1. **Multiple Strategies**: There are often several ways to achieve the same result
+2. **Efficiency Matters**: Direct increment is faster than conditional checking
+3. **Flexibility vs Performance**: Conditional checks are more flexible but slower
+4. **Accumulation Pattern**: Essential for building up results across iterations
+5. **User Interaction**: Loops can be made dynamic with user input
+6. **Mathematical Operations**: Loops are powerful for calculations and sequences
+7. **Classification Logic**: Using conditions inside loops for categorization
 
 ## Common Beginner Mistakes
 
-1. **Forgetting semicolons** between for loop components
-2. **Using assignment (=) instead of comparison (==)** in conditions
-3. **Starting from 1 instead of 0** when working with arrays
-4. **Off-by-one errors** in loop boundaries
-5. **Not understanding variable scope** within loops
+1. **Wrong boundary conditions**
+
+   ```c
+   for (int i = 1; i < 10; i++)  // Misses 10 if you wanted 1-10
+   for (int i = 1; i <= 10; i++) // Correct for 1-10
+   ```
+
+2. **Forgetting to handle user input**
+
+   ```c
+   scanf("%d", &N);  // Don't forget this when using N in loops
+   ```
+
+3. **Not understanding modulus operator**
+
+   ```c
+   i % 2 == 0  // Even (remainder 0)
+   i % 2 != 0  // Odd (remainder 1)
+   ```
+
+4. **Variable scope confusion**
+   ```c
+   int sum = 0;  // Must be outside loop to accumulate
+   for (int i = 1; i <= N; i++) {
+       sum += i;  // Adds to the external sum
+   }
+   ```
