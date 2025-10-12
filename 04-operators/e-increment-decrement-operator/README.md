@@ -80,19 +80,6 @@ When you run the program, you'll see:
 6 6
 ```
 
-## How to Compile and Run
-
-1. **Compile the program:**
-
-   ```bash
-   gcc increment-decrement-operators.c -o increment-decrement-operators
-   ```
-
-2. **Run the executable:**
-   ```bash
-   ./increment-decrement-operators
-   ```
-
 ## Learning Points
 
 1. **Order Matters**: The position of increment/decrement operators affects when the increment occurs
