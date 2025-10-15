@@ -20,7 +20,7 @@ int main()
 
     int array[5];
 
-    ! To declare an array directly :
+    ! To declare an array directly (Declare+Initialize) :
     We need to first declare the 'data type'
     Then we need to declare 'the name of the array'
     Then in the third bracket '[]', we have to declare the size of that array
