@@ -449,14 +449,6 @@ int scores[5];
    int daysInWeek[100];      // ❌ Wastes memory
    ```
 
-## Next Steps
-
-After understanding array declaration, you'll learn:
-
-1. **Accessing Array Elements** - How to read and modify specific elements using indices
-2. **Array Input/Output** - Taking user input into arrays and displaying all elements
-3. **Array Traversal** - Using loops to process all array elements
-4. **Multi-dimensional Arrays** - Arrays with multiple dimensions (like matrices)
 
 ## Key Takeaways
 

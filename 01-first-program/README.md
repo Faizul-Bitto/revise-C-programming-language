@@ -244,14 +244,6 @@ Alice		30	London
 
 Use escape sequences to create a simple ASCII art or pattern.
 
-## Next Steps
-
-After mastering this program, the next topics to learn are:
-
-1. **Variables and Data Types** - Storing and manipulating data
-2. **Input Functions** - Reading user input with `scanf()`
-3. **Arithmetic Operations** - Mathematical calculations in C
-4. **Conditional Statements** - Making decisions with `if/else`
 
 ## Key Takeaways
 

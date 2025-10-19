@@ -735,12 +735,3 @@ for (int i = 0; i < 1000; i++) {
 - Loop condition should be `i < size` or `i <= size-1`
 - This pattern works for any array size and data type
 
-## Next Steps
-
-After mastering array input/output, you'll learn:
-
-1. **Array Processing** - Searching, sorting, and manipulating array data
-2. **Multi-dimensional Arrays** - Working with 2D arrays (matrices)
-3. **Array Algorithms** - Common patterns like finding min/max, reversing, etc.
-4. **String Arrays** - Working with arrays of characters (strings)
-5. **Dynamic Arrays** - Using pointers and dynamic memory allocation
