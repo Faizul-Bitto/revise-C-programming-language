@@ -74,11 +74,13 @@ for (int i = 0; i < n; i++)
 ```
 
 **What happens:**
+
 - Reads the number of elements `n`
 - Creates a Variable Length Array of size `n`
 - Fills the array with user input
 
 **Example with n=5:**
+
 ```
 Input: 5
        1 2 3 4 5
@@ -96,10 +98,12 @@ int j = n - 1;  // Right pointer (starts at end)
 ```
 
 **Pointer positions:**
+
 - `i` points to the first element (index 0)
 - `j` points to the last element (index n-1)
 
 **Visual representation:**
+
 ```
 Array: [1] [2] [3] [4] [5]
 Index:  0   1   2   3   4
@@ -113,11 +117,11 @@ Index:  0   1   2   3   4
 while (i < j)
 {
     int tmp;
-    
+
     tmp = array[i];        // Store left element
     array[i] = array[j];   // Move right element to left
     array[j] = tmp;        // Move left element to right
-    
+
     i++;                   // Move left pointer right
     j--;                   // Move right pointer left
 }
@@ -126,6 +130,7 @@ while (i < j)
 **How the swapping works:**
 
 #### Iteration 1: Swap first and last elements
+
 ```
 Before swap:
 Array: [1] [2] [3] [4] [5]
@@ -144,6 +149,7 @@ i = 1, j = 3
 ```
 
 #### Iteration 2: Swap second and second-to-last elements
+
 ```
 Before swap:
 Array: [5] [2] [3] [4] [1]
@@ -162,6 +168,7 @@ i = 2, j = 2
 ```
 
 #### Iteration 3: Check condition
+
 ```
 i = 2, j = 2
 Condition: i < j → 2 < 2 → FALSE
@@ -184,6 +191,7 @@ for (int i = 0; i < n; i++)
 ### Complete Process with Array [1, 2, 3, 4, 5]
 
 **Initial state:**
+
 ```
 Array: [1] [2] [3] [4] [5]
 Index:  0   1   2   3   4
@@ -192,6 +200,7 @@ Index:  0   1   2   3   4
 ```
 
 **Iteration 1:**
+
 ```
 Swap array[0] and array[4]:
 - tmp = array[0] = 1
@@ -205,6 +214,7 @@ i = 1, j = 3
 ```
 
 **Iteration 2:**
+
 ```
 Swap array[1] and array[3]:
 - tmp = array[1] = 2
@@ -218,6 +228,7 @@ i = 2, j = 2
 ```
 
 **Final check:**
+
 ```
 i = 2, j = 2
 Condition: i < j → 2 < 2 → FALSE
@@ -231,53 +242,61 @@ Loop terminates
 ### Example 1: Five Elements
 
 **Input:**
+
 ```
 5
 1 2 3 4 5
 ```
 
 **Output:**
+
 ```
-5 4 3 2 1 
+5 4 3 2 1
 ```
 
 ### Example 2: Even Number of Elements
 
 **Input:**
+
 ```
 4
 10 20 30 40
 ```
 
 **Output:**
+
 ```
-40 30 20 10 
+40 30 20 10
 ```
 
 ### Example 3: Single Element
 
 **Input:**
+
 ```
 1
 42
 ```
 
 **Output:**
+
 ```
-42 
+42
 ```
 
 ### Example 4: Two Elements
 
 **Input:**
+
 ```
 2
 100 200
 ```
 
 **Output:**
+
 ```
-200 100 
+200 100
 ```
 
 ## Understanding the Two-Pointer Technique
@@ -303,7 +322,7 @@ Array length 4: [1] [2] [3] [4]
                  ↑       ↑
                  i       j
                  (i=1, j=2) → i < j → continue
-                 
+
                  ↑   ↑
                  i   j
                  (i=2, j=1) → i > j → stop
@@ -315,6 +334,7 @@ Array length 5: [1] [2] [3] [4] [5]
 ```
 
 **Using `i <= j` would:**
+
 - Swap middle element with itself (unnecessary)
 - Continue past the middle (redundant operations)
 
@@ -325,7 +345,7 @@ Array length 5: [1] [2] [3] [4] [5]
 ```c
 for (int i = 0; i < n / 2; i++) {
     int j = n - 1 - i;
-    
+
     int tmp = array[i];
     array[i] = array[j];
     array[j] = tmp;
@@ -341,7 +361,7 @@ for (int i = 0; i < n / 2; i++) {
 void reverseArray(int arr[], int size) {
     int i = 0;
     int j = size - 1;
-    
+
     while (i < j) {
         int tmp = arr[i];
         arr[i] = arr[j];
@@ -389,6 +409,7 @@ array[j] = tmp;            // Step 3: Put stored value in second position
 ### Why We Need a Temporary Variable
 
 **Without temporary variable (WRONG):**
+
 ```c
 array[i] = array[j];       // array[i] now has array[j]'s value
 array[j] = array[i];       // array[j] gets array[j]'s value (no change!)
@@ -397,6 +418,7 @@ array[j] = array[i];       // array[j] gets array[j]'s value (no change!)
 **Result:** No swap occurs!
 
 **With temporary variable (CORRECT):**
+
 ```c
 int tmp = array[i];        // Save original array[i]
 array[i] = array[j];       // array[i] gets array[j]'s value
@@ -408,29 +430,34 @@ array[j] = tmp;            // array[j] gets original array[i]'s value
 ### Visual Swapping Example
 
 **Before swap:**
+
 ```
 array[i] = 10, array[j] = 50
 ```
 
 **Step 1: `tmp = array[i]`**
+
 ```
 tmp = 10
 array[i] = 10, array[j] = 50
 ```
 
 **Step 2: `array[i] = array[j]`**
+
 ```
 tmp = 10
 array[i] = 50, array[j] = 50
 ```
 
 **Step 3: `array[j] = tmp`**
+
 ```
 tmp = 10
 array[i] = 50, array[j] = 10
 ```
 
 **After swap:**
+
 ```
 array[i] = 50, array[j] = 10
 ```
@@ -442,7 +469,7 @@ array[i] = 50, array[j] = 10
 ```c
 int isPalindrome(int arr[], int n) {
     int i = 0, j = n - 1;
-    
+
     while (i < j) {
         if (arr[i] != arr[j]) {
             return 0;  // Not a palindrome
@@ -460,10 +487,10 @@ int isPalindrome(int arr[], int n) {
 void rotateArray(int arr[], int n, int k) {
     // Reverse entire array
     reverseArray(arr, n);
-    
+
     // Reverse first k elements
     reverseArray(arr, k);
-    
+
     // Reverse remaining elements
     reverseArray(arr + k, n - k);
 }
@@ -474,7 +501,7 @@ void rotateArray(int arr[], int n, int k) {
 ```c
 int findTwoSum(int arr[], int n, int target) {
     int i = 0, j = n - 1;
-    
+
     while (i < j) {
         int sum = arr[i] + arr[j];
         if (sum == target) {
@@ -495,9 +522,9 @@ int findTwoSum(int arr[], int n, int target) {
 ```c
 int removeDuplicates(int arr[], int n) {
     if (n <= 1) return n;
-    
+
     int i = 0, j = 1;
-    
+
     while (j < n) {
         if (arr[i] != arr[j]) {
             i++;
@@ -505,7 +532,7 @@ int removeDuplicates(int arr[], int n) {
         }
         j++;
     }
-    
+
     return i + 1;  // New length
 }
 ```
@@ -536,19 +563,22 @@ $ ./reverse-array
 ### Using Input File
 
 **Create `input.txt`:**
+
 ```
 5
 1 2 3 4 5
 ```
 
 **Run:**
+
 ```bash
 ./reverse-array < input.txt
 ```
 
 **Output:**
+
 ```
-5 4 3 2 1 
+5 4 3 2 1
 ```
 
 ## Common Beginner Mistakes
@@ -621,6 +651,7 @@ for (int k = 0; k < n; k++) {
 ### Time Complexity
 
 **O(n/2) = O(n)** - Linear time
+
 - We perform n/2 swaps
 - Each swap takes constant time
 - Overall: O(n)
@@ -628,22 +659,24 @@ for (int k = 0; k < n; k++) {
 ### Space Complexity
 
 **O(1)** - Constant space
+
 - Only uses a few variables (i, j, tmp)
 - No additional arrays or data structures
 - In-place algorithm
 
 ### Comparison with Other Methods
 
-| Method                | Time  | Space | Pros                    | Cons                |
-| --------------------- | ----- | ----- | ----------------------- | ------------------- |
-| Two-pointer (this)    | O(n)  | O(1)  | In-place, efficient     | Modifies original   |
-| New array             | O(n)  | O(n)  | Preserves original      | Uses extra memory   |
-| Recursive             | O(n)  | O(n)  | Elegant code            | Stack overflow risk |
-| Built-in reverse      | O(n)  | O(1)  | One line of code        | Language dependent  |
+| Method             | Time | Space | Pros                | Cons                |
+| ------------------ | ---- | ----- | ------------------- | ------------------- |
+| Two-pointer (this) | O(n) | O(1)  | In-place, efficient | Modifies original   |
+| New array          | O(n) | O(n)  | Preserves original  | Uses extra memory   |
+| Recursive          | O(n) | O(n)  | Elegant code        | Stack overflow risk |
+| Built-in reverse   | O(n) | O(1)  | One line of code    | Language dependent  |
 
 ## Memory Visualization
 
 **Before reversal:**
+
 ```
 Memory: [1] [2] [3] [4] [5]
 Index:   0   1   2   3   4
@@ -652,6 +685,7 @@ Index:   0   1   2   3   4
 ```
 
 **After first swap:**
+
 ```
 Memory: [5] [2] [3] [4] [1]
 Index:   0   1   2   3   4
@@ -660,6 +694,7 @@ Index:   0   1   2   3   4
 ```
 
 **After second swap:**
+
 ```
 Memory: [5] [4] [3] [2] [1]
 Index:   0   1   2   3   4
@@ -670,11 +705,13 @@ Index:   0   1   2   3   4
 ## Best Practices
 
 1. **Use meaningful variable names**
+
    ```c
    int left = 0, right = n - 1;  // Clear intent
    ```
 
 2. **Add bounds checking**
+
    ```c
    if (n <= 0) {
        printf("Invalid array size\n");
@@ -683,6 +720,7 @@ Index:   0   1   2   3   4
    ```
 
 3. **Consider edge cases**
+
    ```c
    if (n <= 1) {
        // Array of 0 or 1 element is already "reversed"
@@ -691,6 +729,7 @@ Index:   0   1   2   3   4
    ```
 
 4. **Use const when appropriate**
+
    ```c
    void reverseArray(int arr[], const int size) {
        // size cannot be modified
@@ -704,7 +743,7 @@ Index:   0   1   2   3   4
        int tmp = array[i];
        array[i] = array[j];
        array[j] = tmp;
-       
+
        // Move pointers toward center
        i++;
        j--;
@@ -720,38 +759,3 @@ Index:   0   1   2   3   4
 - **Pointers move** toward each other from opposite ends
 - **Time complexity** is O(n), space complexity is O(1)
 - **Works for any array size** (including 0 and 1 elements)
-
-## Next Steps
-
-After mastering in-place array reversal, you'll learn:
-
-1. **Array Rotation** - Shifting elements by k positions
-2. **Array Partitioning** - Separating elements by criteria
-3. **Merge Operations** - Combining sorted arrays
-4. **Search Algorithms** - Binary search, linear search
-5. **Sorting Algorithms** - Bubble sort, selection sort, etc.
-
-## Troubleshooting
-
-**Problem:** Array doesn't reverse completely
-
-- **Solution:** Check that you're moving both pointers (`i++` and `j--`)
-
-**Problem:** Infinite loop
-
-- **Solution:** Ensure pointers are moving and condition is `i < j`
-
-**Problem:** Middle element gets swapped twice
-
-- **Solution:** Use `i < j` instead of `i <= j`
-
-**Problem:** Elements don't swap
-
-- **Solution:** Use temporary variable for swapping
-
-**Problem:** Program crashes with large arrays
-
-- **Solution:** Check for integer overflow in array size
-
-Understanding in-place array reversal is fundamental to many advanced algorithms and is a common interview question. This two-pointer technique is widely applicable in array manipulation problems!
-
