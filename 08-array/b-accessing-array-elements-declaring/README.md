@@ -601,23 +601,3 @@ After mastering element access, you'll learn:
 2. **Array Traversal** - Processing all elements systematically
 3. **Array Algorithms** - Searching, sorting, and manipulating arrays
 4. **Multi-dimensional Arrays** - Working with 2D arrays and matrices
-
-## Troubleshooting
-
-**Problem:** Program crashes when accessing array
-
-- **Solution:** Check that your index is between 0 and size-1
-
-**Problem:** Getting weird values from array
-
-- **Solution:** Verify you're using the correct index; out-of-bounds reads return garbage
-
-**Problem:** Array element won't change
-
-- **Solution:** Make sure you're using assignment operator (=) and correct syntax: `arr[index] = value;`
-
-**Problem:** "Confused about which element is at which index"
-
-- **Solution:** Remember: index 0 is first, index 1 is second, etc. Draw a diagram!
-
-Understanding how to access and modify array elements is fundamental to effectively using arrays in C programming!
