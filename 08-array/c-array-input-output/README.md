@@ -744,27 +744,3 @@ After mastering array input/output, you'll learn:
 3. **Array Algorithms** - Common patterns like finding min/max, reversing, etc.
 4. **String Arrays** - Working with arrays of characters (strings)
 5. **Dynamic Arrays** - Using pointers and dynamic memory allocation
-
-## Troubleshooting
-
-**Problem:** Program only reads some elements
-
-- **Solution:** Check loop boundary - should be `i < size` not `i < size-1`
-
-**Problem:** Getting weird values in output
-
-- **Solution:** Ensure you're reading input before displaying output
-
-**Problem:** Program crashes during input
-
-- **Solution:** Verify you're using `&arr[i]` not `arr[i]` in scanf
-
-**Problem:** First element is always 0 or garbage
-
-- **Solution:** Make sure loop starts from `i = 0`, not `i = 1`
-
-**Problem:** Input file not working
-
-- **Solution:** Ensure input file has correct number of values matching array size
-
-This pattern of using loops with arrays is one of the most important programming techniques you'll use throughout your C programming journey!

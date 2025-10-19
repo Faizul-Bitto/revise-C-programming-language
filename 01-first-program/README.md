@@ -261,18 +261,4 @@ After mastering this program, the next topics to learn are:
 - Escape sequences like `\n` and `\t` control text formatting
 - Always end `main()` with `return 0;` to indicate successful execution
 
-## Troubleshooting
-
-**Problem**: Program doesn't compile
-
-- **Solution**: Check if `#include <stdio.h>` is at the top
-
-**Problem**: Text appears on same line when you want separate lines
-
-- **Solution**: Add `\n` at the end of printf statements
-
-**Problem**: Unexpected characters in output
-
-- **Solution**: Check your escape sequences - use `\` (backslash), not `/` (forward slash)
-
 This foundation serves as a solid base for progressing through more complex C programming concepts!

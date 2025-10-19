@@ -708,27 +708,6 @@ After mastering reverse array traversal, you'll learn:
 4. **Two-dimensional Arrays** - Working with matrices
 5. **Array Manipulation** - Rotating, shifting, and rearranging elements
 
-## Troubleshooting
-
-**Problem:** Output missing first element
-
-- **Solution:** Change condition from `i > 0` to `i >= 0`
-
-**Problem:** Program crashes or shows garbage values
-
-- **Solution:** Ensure you're starting from `n - 1`, not `n`
-
-**Problem:** Infinite loop
-
-- **Solution:** Verify you're using `i--` not `i++` in the loop
-
-**Problem:** VLA not working
-
-- **Solution:** Compile with `-std=c99` flag or use a fixed-size array
-
-**Problem:** Wrong number of elements printed
-
-- **Solution:** Check that input loop and output loop both run `n` times
 
 Understanding reverse iteration is a fundamental skill that applies to many programming problems, from basic data display to complex algorithm implementations!
 

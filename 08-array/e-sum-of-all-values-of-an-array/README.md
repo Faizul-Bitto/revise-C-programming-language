@@ -860,26 +860,5 @@ After mastering array summation, you'll learn:
 5. **Product of Array** - Multiplying all elements
 6. **Conditional Sums** - Sum only elements meeting conditions
 
-## Troubleshooting
-
-**Problem:** Sum is wrong/random value
-
-- **Solution:** Initialize `sum = 0` before the loop
-
-**Problem:** Sum only shows last element
-
-- **Solution:** Use `sum = sum + array[i]`, not `sum = array[i]`
-
-**Problem:** Sum becomes negative with large numbers
-
-- **Solution:** Integer overflow - use `long long sum = 0;`
-
-**Problem:** Program doesn't compile
-
-- **Solution:** Add `-std=c99` flag for VLA support
-
-**Problem:** Sum doesn't increase
-
-- **Solution:** Check you're using `=` (assignment), not `==` (comparison)
 
 Understanding array summation is fundamental to data processing, statistics, and many real-world programming tasks. This accumulator pattern appears throughout programming in various forms!
