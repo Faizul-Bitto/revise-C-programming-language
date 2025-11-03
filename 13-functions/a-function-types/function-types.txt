@@ -1,0 +1,65 @@
+there are four types of functions ->
+
+1. return + parameter
+2. return + no parameter
+3. no return + parameter
+4. np return + no parameter
+
+/*
+
+    syntax :
+
+    returnType    functionName(type_of_parameter parameter)
+    {
+
+        return something;
+    }
+
+    int main()
+    {
+        function_call(arguments);
+
+        return 0;
+    }
+
+*/
+
+
+
+/*
+
+    no return type syntax :
+
+    void    functionName(type_of_parameter parameter)
+    {
+
+    }
+
+    int main()
+    {
+        function_call(arguments);
+
+        return 0;
+    }
+
+*/
+
+'void' syntax blocks returning any value. But, we can be returned from any point from the function.
+
+/*
+
+    no return type syntax :
+
+    void    functionName(type_of_parameter parameter)
+    {   
+        return;
+    }
+
+    int main()
+    {
+        function_call(arguments);
+
+        return 0;
+    }
+
+*/
