@@ -1,0 +1,15 @@
+0th index address    = 0061FF08
+1st index address    = 0061FF0C
+2nd index address    = 0061FF10
+3rd index address    = 0061FF14
+4th index address    = 0061FF18
+
+address of the array = 0061FF08
+
+value of *a          = 10
+
+index 0 = 200
+index 1 = 20
+index 2 = 30
+index 3 = 40
+index 4 = 50
