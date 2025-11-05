@@ -1,0 +1,4 @@
+value of x                                           = 10
+address of x                                         = 0061FF18
+address of x, but now stored in ptr                  = 0061FF18
+value of x, but now collected from the ptr variable  = 10

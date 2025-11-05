@@ -16,11 +16,11 @@ int main()
      */
 
     int x = 10;
-    printf("address of p                          = %p\n", &x);
+    printf("address of x                          = %p\n", &x);
 
     int *ptr;
     ptr = &x;
-    printf("address of p, but now stored in ptr   = %p\n", ptr); // address format specifier is -> %p
+    printf("address of x, but now stored in ptr   = %p\n", ptr); // address format specifier is -> %p
 
     printf("address of ptr itself                 = %p", &ptr); // ptr is variable, it has also its own memory address
 
