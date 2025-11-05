@@ -9,7 +9,11 @@ int main()
 
     printf("%d\n", a); // will print the value -> 10
 
-    printf("%d", &a); // will print the address where the value '10' stored
+    printf("%p", &a); // will print the address where the value '10' stored
+
+    /*
+        so the format specifier of the address -> % p
+     */
 
     return 0;
 }
