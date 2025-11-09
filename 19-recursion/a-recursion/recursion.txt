@@ -1,0 +1,2 @@
+1. A function which calls itself again and again and again (continuously) is called recursive function.
+2. And the full recursive process, is called recursion
